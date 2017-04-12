@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta author="Yvonne Ingles">
+    <title>Assignment 1:Design</title>
+
+    <!-- Load materialze framework, Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+    <!-- Read in css file -->
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+
+    <!--Plotly CDN-->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- Load jQuery library -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!--Load Javascript-->
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <!-- Create a header that describes the project -->
+    <header>
+        <!-- Create header elements here -->
+        <div class="section" id="header">
+            <div class="container">
+                <h1>Working with the Plotly.js library to create visualizations for a dataset related to antibiotics.</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Create a container object to hold the main section of your page -->
+    <main class="container">
+        <!-- Create a section element in your page in which you'll arrange elements -->
+        <div class="section" id="elements">
+            <!-- Create a div with an id of bubbleMap in which to render your map -->
+            <!-- the minimum inhibitory concentration (MIC), a measure of the effectiveness of the antibiotic, which represents the
+                concentration of antibiotic required to prevent growth in vitro. -->
+            <!-- Document the visual encodings you used and why they are appropriate for the data. These decisions include the
+                choice of visualization type, size, color, scale, and other visual elements, as well as the use of sorting
+                or other data transformations. How do these decisions facilitate effective communication? In theory, you
+                should be able to describe the choice for each pixel in your graphical display. -->
+            <h4>What is the minimum inhibitory concentration (MIC) required to prevent growth in vitro for 16 different bacterias?
+                </h4>
+            <div id="firstViz"></div>
+            <div class="description">
+                The visual encodings that I used are: position, length, and color. The position of the bars, such as the way that they are grouped
+                together indicate which bars correspond to which bacteria has what concentration of antibiotics. The length of the bars indicate
+                the value of minimum inhibitory concentration (MIC) that is needed for each antibiotic to prevent growth in vitro for a bacteria.
+                The colors of the bars represent which antibiotic is being encoded. The raw data was normalized by a Log10(x)+3 scale. This was done 
+                because the values had a large range between them (0.001 - 870 MIC).
+
+                The y-axis is scaled incrementally by 1 to simplify the amount of visual information along the axis. The labels along the x-axis are
+                angled for better readibility. The legend in the top right indicates what the colors of the bars mean.
+            </div>
+            <h4>What are the results of a gram staining test on the bacteria?</h4>
+            <div id="secondViz"></div>
+            <div class="description">
+                The visual encodings that I used are: position and color. The position of the circles indicate what the result of the gram staining
+                test was on the bacteria. Color was used to encode a positive reading (green) and a negative reading (red).
+
+                The y-axis has labels to further indicate whether the gram staining was positive or negative for the pertaining bacteria. The height
+                of the graph was set to 300px to decrease the white space betwen the circles. This lessens how much the viewers eyes have to travel
+                to see which circle represents the result of the corresponding bacteria.
+            </div>
+            <h4>Which antibiotic is most effective against bacteria when considering its MIC?</h4>
+            <div id="thirdViz"></div>
+            <div class="description">
+                The visual encodings that I used are: position, color and size. The position of the circles indicate the MIC value of the antibiotic
+                needed. Color was used to encode the antibiotic name. The circle sizes were encoded with the MIC value for the corresponding bacteria.
+                The smaller the circle size the less MIC needed to prevent in vitro growth of the bacteria.
+
+                The graph has grid lines to make it easier to see where the circles are positioned. This makes it easier to identify the MIC and the
+                bacteria that pertains to a specific circle. Like the previous graphs, the x-axis labels are angled for readiblity and the legend
+                indicates the antibiotic name and color.
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

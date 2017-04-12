@@ -1,0 +1,28 @@
+/* Apply desired styles to your HTML elements */
+/* All elements */
+* {
+    box-sizing: border-box;
+}
+
+/* element with ID */
+#header {
+    /*background-color: #ee6e73;*/
+    background-color: #068;
+}
+
+.description {
+    margin-bottom: 100px;
+    padding-bottom: 90px;
+    border-bottom: 1px solid black;
+}
+
+/* element selection */
+h1 {
+    font-size: 10;
+    color: #000;
+}
+
+/* elements with class */
+.italics {
+    font-style: italic;
+}
